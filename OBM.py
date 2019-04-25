@@ -1465,68 +1465,7 @@ def lineBot(op):
                             line.sendText(msg.to,"ชื่อที่แสดง: "+userData.displayName)
                             line.sendText(msg.to,"ข้อความสเตตัส:\n"+userData.statusMessage)
                             line.sendText(msg.to,"ไอดีบัญชี: "+userData.mid)
-                
-                elif "➢❍பꪔ🔝✬١ढेืਹℓట่થ✭ 🌺" in msg.text:
-                    spl = msg.text.split("➢❍பꪔ🔝✬١ढेืਹℓట่થ✭ 🌺")
-                    if spl[len(spl)-1] == "":
-                        line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id)
-                elif "รัน @" in msg.text:
-                    print ("[Command]covergroup")
-                    _name = msg.text.replace("รัน @","")
-                    _nametarget = _name.rstrip('  ')
-                    gs = line.getGroup(msg.to)
-                               line.createGroup("➢❍பꪔ🔝✬١ढेืਹℓట่થ✭ 🌺,mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝✬١ढेืਹℓట่થ✭ 🌺]")
-                               line.createGroup("➢❍பꪔ🔝 ",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.createGroup("➢❍பꪔ🔝",mi_d)
-                               line.sendText(msg.to,"[➢❍பꪔ🔝]")
-                               line.sendText(msg.to,"❋ทำการรัน สำเร็จ")
-                            except:
-                                pass
-                    print ("[Command]covergroup]")
-                elif "รันแชท @" in msg.text:
-                    _name = msg.text.replace("รันแชท @","")
-                    _nametarget = _name.rstrip(' ')
-                    gs = line.getGroup(msg.to)
-                    for g in gs.members:
-                        if _nametarget == g.displayName:
-                           line.sendText(g.mid,"สวัสดีเรา อบต")
-                           line.sendText(g.mid,"สวัสดีเรา อบต")
-			   line.sendText(g.mid,"สวัสดีเรา อบต")
-                    targets = []
-                    for g in gs.members:
-                        if _nametarget == g.displayName:
-                            targets.append(g.mid)
-                    if targets == []:
-                        line.sendText(msg.to,"Contact not found")
-                    else:
-                        for target in targets:
-                            try:
-                               thisgroup = line.getGroups([msg.to])
-                               Mids = [target for contact in thisgroup[0].members]
-                               mi_d = Mids[:33]
-                elif "รัน: " in msg.text.lower():
-
-                        key = msg.text[-33:]
-                        line.findAndAddContactsByMid(key)                   
-                        contact = cl.getContact(key)
-                        line.createGroup("เสือเผ่นลบรัน",[key])
-                        line.sendText(msg,to,"❋ทำการรัน สำเร็จ❋")
+  
                 elif "ไม่รับเชิญ " in msg.text.lower():
                     spl = re.split("ไม่รับเชิญ ",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
@@ -3971,7 +3910,7 @@ def lineBot(op):
                     ret_ += "\n╠ STICKER PACKAGES ID : {}".format(pkg_id)
                     ret_ += "\n╠ STICKER VERSION : {}".format(stk_ver)
                     ret_ += "\n╠ STICKER URL : line://shop/detail/{}".format(pkg_id)
-                    ret_ += "\n╚══"[ ➢❍பꪔ🔝✬١ढेืਹℓట่થ✭ 🌺 ]"
+                    ret_ += "\n╚══[ ➢❍பꪔ🔝✬١ढेืਹℓట่થ✭ 🌺 ]"
                     line.sendMessage(to, str(ret_))
               
 #==============================================================================#
